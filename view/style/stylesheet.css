@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:700i');
+
+/**********************************************************************************/
+/************************************** BODY **************************************/
+/**********************************************************************************/
+
+body {
+	margin-left: 0px;
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	background-color: #222;
+	color: #fff;
+}
+
+/**********************************************************************************/
+/************************************* HEADER *************************************/
+/**********************************************************************************/
+
+#header {
+	border-bottom: 1px solid rgba(170,170,170,0.5);
+	background-color: #353535;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	-webkit-transition: height .2s ease-in-out;
+	transition: height .2s ease-in-out;
+	height: 77px;
+	left: 0;
+}
+
+#title, #title a {
+	color: #fff;
+	margin: 15px;
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	text-decoration: none;
+	font-size: 40px;
+	float: left;
+	display: block;
+}
+
+nav {
+	float: right;
+	padding: 20px;
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 0 25px;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+#menu-icon {
+	display: none;
+	visibility: hidden;
+}
+
+.menu {
+	float: right;
+	overflow: hidden;
+}
+
+.menu a {
+	padding: 10px;
+	color: #000;
+	font-weight: 700;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.menu a::before,
+.menu a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.menu a::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.menu a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.menu a:hover,
+.menu a:focus {
+	color: #fff;
+}
+
+.menu a:hover::before,
+.menu a:focus::before,
+.menu a:hover::after,
+.menu a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+@media screen and (max-width: 1080px) {
+	header {
+		position: absolute;
+	}
+
+	#menu-icon {
+		visibility: visible;
+		display:inline-block;
+
+	}
+
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+}
+
+/**********************************************************************************/
+/************************************** MAIN **************************************/
+/**********************************************************************************/
+
+#main {
+	max-width: 1280px;
+	min-height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#global {
+	margin: 10% auto;
+	max-width: 500px;
+	border-radius: 3px;
+}
+
+#global-webcam {
+	margin: 10% auto;
+	max-width: 1400px;
+	border-radius: 3px;
+}
+
+#content {
+	width: 600px;
+	margin: 10% auto;
+	padding: 10px 10px 10px 10px;
+	position: relative;
+}
+
+#login {
+	top: 300px;
+	width: 300px;
+	margin: 10% auto;
+	padding: 10px 10px 10px 10px;
+	position: relative;
+}
+
+#login a {
+	color: #fff;
+	text-align: center;
+}
+
+input:disabled.btn:hover,
+input:disabled.btn:active,
+input:disabled.btn:focus {
+	color: green;
+}
+
+input, select {
+	color: #f6f6f6;
+	padding: 6px 12px;
+	font-size: 12px;
+	margin-bottom: 15px;
+	background-color: #222;
+	border: none;
+	text-align: left;
+	border-bottom: 2px solid #f6f6f6;
+}
+
+input {
+	width: 274px;
+	height: 30px;
+}
+
+select, #submit {
+	width: 300px;
+	height: 44px;
+	text-align: center;
+	border: none;
+}
+
+select {
+	text-indent: 130px;
+}
+
+input.btn {
+	width: 50px;
+}
+
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+aside#sidebar {
+	margin-right: 10%;
+    float: right;
+    width: 45%;
+}
+
+article#main-col {
+    float: left;
+}
+
+@media (max-width: 1400px) {
+    header #branding,
+    header nav,
+    header nav li,
+    article#main-col,
+    article#main-column,
+    aside#sidebar {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+	#global {
+		margin: 10% auto;
+		max-width: 500px;
+		border-radius: 3px;
+	}
+}
+
+@media only screen and (max-width: 795px) {
+	#global {
+		margin: 12% auto;
+		max-width: 500px;
+		border-radius: 3px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#global {
+		margin: 22% auto;
+		padding: 2px 5px 5px 20px;
+		max-width: 500px;
+		border-radius: 3px;
+	}
+}
+
+/**********************************************************************************/
+/************************************ GALLERY *************************************/
+/**********************************************************************************/
+
+#globalgallery {
+	margin: auto;
+	padding: 30px;
+	position: relative;
+}
+
+div.gallery {
+	border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.responsive {
+	padding: 0 6px;
+	float: left;
+	width: 12%;
+}
+
+@media only screen and (max-width: 700px) {
+	.responsive {
+		width: 50%;
+		margin: 6px 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.responsive {
+		width: 100%;
+	}
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.pagination {
+	width: 97%;
+	background-color: #8AC007;
+	position: fixed;
+	margin: 0 auto;
+	bottom: 3.7%;
+	border: 1px solid #8AC007;
+	display: block;
+	text-align: center;
+}
+
+.pagination a {
+	margin: 0 auto;
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.pagination a.active {
+	color: white;
+	padding: 0 8px 0 40px;
+}
+
+.like {
+	color: #fff;
+}
+
+.delete {
+	color: #fff;
+}
+
+.camflow {
+	color: #fff;
+}
+
+/**********************************************************************************/
+/************************************* TOOLS **************************************/
+/**********************************************************************************/
+
+.fa-toggle-on, a#notif{
+	font-size: large;
+	color: #32a0c2;
+	text-decoration: none;
+}
+
+.fa-toggle-off, a#notif {
+	text-decoration: none;
+}
+
+.linker-none {
+	list-style: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li:last-child {
+	border: none;
+}
+
+li a {
+	text-decoration: none;
+	color: #c2c2c2;
+
+	-webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+	-moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+	-o-transition: font-size 0.3s ease, background-color 0.3s ease;
+	-ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+	transition: font-size 0.3s ease, background-color 0.3s ease;
+	display: block;
+	width: 200px;
+}
+
+li a:hover {
+	font-size: 30px;
+}
+
+/**********************************************************************************/
+/************************************* FOOTER *************************************/
+/**********************************************************************************/
+
+footer {
+	background:#353535;
+	height: 50px;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
